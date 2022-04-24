@@ -10,9 +10,9 @@ class WebTasks(TaskSet):
     def load(self):
         base64string = base64.encodestring('%s:%s' % ('user', 'password')).replace('\n', '')
 
-        catalogue = self.client.get("/catalogue").json()
-        category_item = choice(catalogue)
-        item_id = category_item["id"]
+        # catalogue = self.client.get("/catalogue").json()
+        # category_item = choice(catalogue)
+        item_id = "6d62d909-f957-430e-8689-b5129c0bb75e"
 
         self.client.get("/")
         self.client.get("/login", headers={"Authorization":"Basic %s" % base64string})
